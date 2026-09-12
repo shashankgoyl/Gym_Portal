@@ -21,7 +21,9 @@ const config: CapacitorConfig = {
   webDir: "dist/public",
   server: {
     url: process.env.HP_PORTAL_URL ?? "https://your-hp-portal.example.com",
-    cleartext: false,
+    // Set to true only while testing over plain http:// on your home Wi-Fi.
+    // Switch back to false once HP_PORTAL_URL is a real https:// deployment.
+    cleartext: true,
   },
   android: {
     allowMixedContent: false,
