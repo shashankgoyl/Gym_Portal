@@ -20,9 +20,8 @@ const config: CapacitorConfig = {
   appName: "HP — Health Portal",
   webDir: "dist/public",
   server: {
-    url: process.env.HP_PORTAL_URL ?? "https://your-hp-portal.example.com",
-    // Set to true only while testing over plain http:// on your home Wi-Fi.
-    // Switch back to false once HP_PORTAL_URL is a real https:// deployment.
+    url: process.env.HP_PORTAL_URL ?? "http://192.168.1.15:3000",
+    // Set to true for plain http:// testing on your home Wi-Fi.
     cleartext: true,
   },
   android: {
